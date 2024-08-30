@@ -1,0 +1,28 @@
+proxies:
+    - { name: '剩余流量：4.36 GB', type: ss, server: gz02_3gzgaw.fy4319.com, port: 10810, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 套餐到期：2024-08-24, type: ss, server: gz02_3gzgaw.fy4319.com, port: 10810, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 香港_01, type: ss, server: gz02_3gzgaw.fy4319.com, port: 10810, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 香港_02, type: ss, server: gz02_3gzgaw.fy4319.com, port: 10384, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 香港_03, type: ss, server: gz02_3gzgaw.fy4319.com, port: 10124, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 香港_04, type: ss, server: gz02_3gzgaw.fy4319.com, port: 10145, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 香港_05, type: ss, server: gz02_3gzgaw.fy4319.com, port: 10307, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 香港_06, type: ss, server: gz02_3gzgaw.fy4319.com, port: 10895, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 日本_01, type: ss, server: gz02_3gzgaw.fy4319.com, port: 10294, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 日本_02, type: ss, server: gz02_3gzgaw.fy4319.com, port: 10577, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 日本_03, type: ss, server: gz02_3gzgaw.fy4319.com, port: 10943, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 日本_04, type: ss, server: gz02_3gzgaw.fy4319.com, port: 10268, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 韩国_01, type: ss, server: gz02_3gzgaw.fy4319.com, port: 19218, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 美国_01, type: ss, server: gz02_3gzgaw.fy4319.com, port: 46318, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 美国_02, type: ss, server: gz02_3gzgaw.fy4319.com, port: 26657, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 美国_03, type: ss, server: gz02_3gzgaw.fy4319.com, port: 38079, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 美国_04, type: ss, server: gz02_3gzgaw.fy4319.com, port: 42753, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 新加坡_01, type: ss, server: gz02_3gzgaw.fy4319.com, port: 10738, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 新加坡_02, type: ss, server: gz02_3gzgaw.fy4319.com, port: 10928, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 新加坡_04, type: ss, server: gz02_3gzgaw.fy4319.com, port: 42029, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 台湾_01, type: ss, server: gz02_3gzgaw.fy4319.com, port: 10185, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 台湾_02, type: ss, server: gz02_3gzgaw.fy4319.com, port: 10008, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 台湾_03, type: ss, server: gz02_3gzgaw.fy4319.com, port: 10018, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 英国_01, type: ss, server: nnertn.vxzjv.xyz, port: 11795, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 英国_02, type: ss, server: nnertn.vxzjv.xyz, port: 19917, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 英国_03, type: ss, server: nnertn.vxzjv.xyz, port: 10410, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
+    - { name: 尼日利亚, type: ss, server: nnertn.vxzjv.xyz, port: 59775, cipher: chacha20-ietf-poly1305, password: baac99d9-ec9f-4a1f-aed1-3a5f653e9d0d, udp: true }
