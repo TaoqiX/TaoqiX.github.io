@@ -1,0 +1,121 @@
+# 策略组引用
+
+W_A: &w1 {proxies: [新加坡02, 台湾01]}
+W_B: &w2 {proxies: [DIRECT, 新加坡02, 台湾01]}
+
+
+# 🌏 代理默认
+R_C: &r3 {type: select, <<: *w1}
+# 🐟MATCH
+R_D: &r4 {type: select, <<: *w2}
+# 分流默认
+R_E: &r5 {type: select, <<: *w1}
+# 🎮 游戏服务
+R_F: &r6 {type: select, <<: *w2}
+
+
+classical: &b1 {type: http, behavior: classical, interval: 90000}
+domain: &b2 {type: http, behavior: domain, interval: 90000}
+ipcidr: &b3 {type: http, behavior: ipcidr, interval: 90000}
+
+
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+external-controller: '127.0.0.1:9090'
+dns:
+    enable: true
+    ipv6: false
+    default-nameserver: [223.5.5.5, 119.29.29.29]
+    enhanced-mode: fake-ip
+    fake-ip-range: 198.18.0.1/16
+    use-hosts: true
+    nameserver: ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query']
+    fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
+    fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
+
+
+proxies:
+    - { name: 新加坡02, type: ss, server: hb1.5354875.xyz, port: 25696, cipher: chacha20-ietf-poly1305, password: 581f7e56-5e44-47fb-bf1c-9d608aca9290, udp: true }
+    - { name: 台湾01, type: vmess, server: tw1.5354875.xyz, port: 49574, uuid: 581f7e56-5e44-47fb-bf1c-9d608aca9290, alterId: 0, cipher: auto, udp: true, network: ws }
+
+
+proxy-groups:
+
+  - {name: 🌏 代理默认, <<: *r3, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Streaming.png}
+
+  # 分流代理组，不被其他代理组使用
+  - {name: 🐟MATCH, <<: *r4, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png}
+  - {name: 💬chatGPT, <<: *r5, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Reddit.png}
+  - {name: 🇬 谷歌服务, <<: *r5, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Google.png}
+  - {name: 🎬TikTok, <<: *r5, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/TikTok.png}
+  - {name: ✈️Telegram, <<: *r5, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png}
+  - {name: Twitter, <<: *r5, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png}
+  - {name: 🎮 游戏服务, <<: *r6, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Clubhouse.png}
+
+
+rule-providers:
+
+  Advertising_Classical: {<<: *b1, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Advertising/Advertising_Classical.yaml, path: ./RRR/blackmatrix7/Advertising_Classical.yaml}
+  BlockHttpDNS: {<<: *b1, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BlockHttpDNS/BlockHttpDNS.yaml, path: ./RRR/blackmatrix7/BlockHttpDNS.yaml}
+  chatGPT: {<<: *b1, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml, path: ./RRR/blackmatrix7/OpenAI.yaml}
+  Google: {<<: *b1, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml, path: ./RRR/blackmatrix7/Google.yaml}
+  TikTok: {<<: *b1, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/TikTok/TikTok.yaml, path: ./RRR/blackmatrix7/TikTok.yaml}
+  Telegram: {<<: *b1, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml, path: ./RRR/blackmatrix7/Telegram.yaml}
+  Twitter: {<<: *b1, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Twitter/Twitter.yaml, path: ./RRR/blackmatrix7/Twitter.yaml}
+  Spotify: {<<: *b1, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Spotify/Spotify.yaml, path: ./RRR/blackmatrix7/Spotify.yaml}
+  Apple_Classical: {<<: *b1, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple_Classical.yaml, path: ./RRR/blackmatrix7/Apple_Classical.yaml}
+  Microsoft: {<<: *b1, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml, path: ./RRR/blackmatrix7/Microsoft.yaml}
+  GlobalMedia_Classical: {<<: *b1, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml, path: ./RRR/blackmatrix7/GlobalMedia_Classical.yaml}
+
+  GameDownloadCN: {<<: *b1, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Game/GameDownloadCN/GameDownloadCN.yaml, path: ./RRR/blackmatrix7/GameDownloadCN.yaml}
+  GameDownload: {<<: *b1, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Game/GameDownload/GameDownload.yaml, path: ./RRR/blackmatrix7/GameDownload.yaml}
+  Epic: {<<: *b1, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Epic/Epic.yaml, path: ./RRR/blackmatrix7/Epic.yaml}
+  SteamCN: {<<: *b1, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/SteamCN/SteamCN.yaml, path: ./RRR/blackmatrix7/SteamCN.yaml}
+  Steam: {<<: *b1, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Steam/Steam.yaml, path: ./RRR/blackmatrix7/Steam.yaml}
+
+  Global_Classical: {<<: *b1, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Global/Global_Classical.yaml, path: ./RRR/blackmatrix7/Global_Classical.yaml}
+  China_Classical: {<<: *b1, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/China/China_Classical.yaml, path: ./RRR/blackmatrix7/China_Classical.yaml}
+  lan: {<<: *b1, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.yaml, path: ./RRR/blackmatrix7/Lan.yaml}
+
+
+rules:
+
+# 单独设置
+  - DOMAIN,objects.githubusercontent.com,🌏 代理默认
+  - DOMAIN-KEYWORD,github,🌏 代理默认
+  - DOMAIN,challenges.cloudflare.com,💬chatGPT
+  - DOMAIN-SUFFIX,bnsubservdom.com,🌏 代理默认
+  - DOMAIN-SUFFIX,googlevideo.com,🌏 代理默认
+
+# 我的分流
+  - RULE-SET,Advertising_Classical,REJECT      # 最大的，5196 KB
+  - RULE-SET,BlockHttpDNS,REJECT
+  - RULE-SET,chatGPT,💬chatGPT
+  - RULE-SET,Google,🇬 谷歌服务
+  - RULE-SET,TikTok,🎬TikTok
+  - RULE-SET,Telegram,✈️Telegram
+  - RULE-SET,Twitter,Twitter
+  - RULE-SET,Spotify,DIRECT
+  - RULE-SET,Apple_Classical,DIRECT
+  - RULE-SET,Microsoft,DIRECT
+  # 游戏
+  - RULE-SET,GameDownloadCN,DIRECT
+  - RULE-SET,GameDownload,DIRECT
+  - RULE-SET,Epic,🎮 游戏服务
+  - DOMAIN-SUFFIX,steamserver.net,🎮 游戏服务     # steam聊天功能
+  - RULE-SET,SteamCN,DIRECT
+  - RULE-SET,Steam,🎮 游戏服务
+
+  - RULE-SET,GlobalMedia_Classical,🌏 代理默认
+# 最后兜底
+  - RULE-SET,Global_Classical,🌏 代理默认          # 第二大，802 KB    *******
+  - RULE-SET,China_Classical,DIRECT             # 第三大，112 KB
+  - RULE-SET,lan,DIRECT
+  - GEOIP,CN,DIRECT
+
+# 漏网之鱼
+  - DOMAIN,ipv4.egdownload.fastly-edge.com,DIRECT   # epic糖豆人更新
+  - MATCH,🐟MATCH
