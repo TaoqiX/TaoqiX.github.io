@@ -60,27 +60,27 @@ proxy-groups:
 
 rule-providers:
 
-  Advertising_Classical: {<<: *b1, url: https://taoqix.github.io/blackmatrix7/Advertising_Classical.yaml, path: ./RRR/blackmatrix7/Advertising_Classical.yaml}
-  BlockHttpDNS: {<<: *b1, url: https://taoqix.github.io/blackmatrix7/BlockHttpDNS.yaml, path: ./RRR/blackmatrix7/BlockHttpDNS.yaml}
-  chatGPT: {<<: *b1, url: https://taoqix.github.io/blackmatrix7/OpenAI.yaml, path: ./RRR/blackmatrix7/OpenAI.yaml}
-  Google: {<<: *b1, url: https://taoqix.github.io/blackmatrix7/Google.yaml, path: ./RRR/blackmatrix7/Google.yaml}
-  TikTok: {<<: *b1, url: https://taoqix.github.io/blackmatrix7/TikTok.yaml, path: ./RRR/blackmatrix7/TikTok.yaml}
-  Telegram: {<<: *b1, url: https://taoqix.github.io/blackmatrix7/Telegram.yaml, path: ./RRR/blackmatrix7/Telegram.yaml}
-  Twitter: {<<: *b1, url: https://taoqix.github.io/blackmatrix7/Twitter.yaml, path: ./RRR/blackmatrix7/Twitter.yaml}
-  Spotify: {<<: *b1, url: https://taoqix.github.io/blackmatrix7/Spotify.yaml, path: ./RRR/blackmatrix7/Spotify.yaml}
-  Apple_Classical: {<<: *b1, url: https://taoqix.github.io/blackmatrix7/Apple_Classical.yaml, path: ./RRR/blackmatrix7/Apple_Classical.yaml}
-  Microsoft: {<<: *b1, url: https://taoqix.github.io/blackmatrix7/Microsoft.yaml, path: ./RRR/blackmatrix7/Microsoft.yaml}
-  GlobalMedia_Classical: {<<: *b1, url: https://taoqix.github.io/blackmatrix7/GlobalMedia_Classical.yaml, path: ./RRR/blackmatrix7/GlobalMedia_Classical.yaml}
+  Advertising_Classical: {<<: *b1, url: https://taoqix.github.io/rules/blackmatrix7/Advertising_Classical.yaml, path: ./RRR/blackmatrix7/Advertising_Classical.yaml}
+  BlockHttpDNS: {<<: *b1, url: https://taoqix.github.io/rules/blackmatrix7/BlockHttpDNS.yaml, path: ./RRR/blackmatrix7/BlockHttpDNS.yaml}
+  chatGPT: {<<: *b1, url: https://taoqix.github.io/rules/blackmatrix7/OpenAI.yaml, path: ./RRR/blackmatrix7/OpenAI.yaml}
+  Google: {<<: *b1, url: https://taoqix.github.io/rules/blackmatrix7/Google.yaml, path: ./RRR/blackmatrix7/Google.yaml}
+  TikTok: {<<: *b1, url: https://taoqix.github.io/rules/blackmatrix7/TikTok.yaml, path: ./RRR/blackmatrix7/TikTok.yaml}
+  Telegram: {<<: *b1, url: https://taoqix.github.io/rules/blackmatrix7/Telegram.yaml, path: ./RRR/blackmatrix7/Telegram.yaml}
+  Twitter: {<<: *b1, url: https://taoqix.github.io/rules/blackmatrix7/Twitter.yaml, path: ./RRR/blackmatrix7/Twitter.yaml}
+  Spotify: {<<: *b1, url: https://taoqix.github.io/rules/blackmatrix7/Spotify.yaml, path: ./RRR/blackmatrix7/Spotify.yaml}
+  Apple_Classical: {<<: *b1, url: https://taoqix.github.io/rules/blackmatrix7/Apple_Classical.yaml, path: ./RRR/blackmatrix7/Apple_Classical.yaml}
+  Microsoft: {<<: *b1, url: https://taoqix.github.io/rules/blackmatrix7/Microsoft.yaml, path: ./RRR/blackmatrix7/Microsoft.yaml}
+  GlobalMedia_Classical: {<<: *b1, url: https://taoqix.github.io/rules/blackmatrix7/GlobalMedia_Classical.yaml, path: ./RRR/blackmatrix7/GlobalMedia_Classical.yaml}
 
-  GameDownloadCN: {<<: *b1, url: https://taoqix.github.io/blackmatrix7/GameDownloadCN.yaml, path: ./RRR/blackmatrix7/GameDownloadCN.yaml}
-  GameDownload: {<<: *b1, url: https://taoqix.github.io/blackmatrix7/GameDownload.yaml, path: ./RRR/blackmatrix7/GameDownload.yaml}
-  Epic: {<<: *b1, url: https://taoqix.github.io/blackmatrix7/Epic.yaml, path: ./RRR/blackmatrix7/Epic.yaml}
-  SteamCN: {<<: *b1, url: https://taoqix.github.io/blackmatrix7/SteamCN.yaml, path: ./RRR/blackmatrix7/SteamCN.yaml}
-  Steam: {<<: *b1, url: https://taoqix.github.io/blackmatrix7/Steam.yaml, path: ./RRR/blackmatrix7/Steam.yaml}
+  GameDownloadCN: {<<: *b1, url: https://taoqix.github.io/rules/blackmatrix7/GameDownloadCN.yaml, path: ./RRR/blackmatrix7/GameDownloadCN.yaml}
+  GameDownload: {<<: *b1, url: https://taoqix.github.io/rules/blackmatrix7/GameDownload.yaml, path: ./RRR/blackmatrix7/GameDownload.yaml}
+  Epic: {<<: *b1, url: https://taoqix.github.io/rules/blackmatrix7/Epic.yaml, path: ./RRR/blackmatrix7/Epic.yaml}
+  SteamCN: {<<: *b1, url: https://taoqix.github.io/rules/blackmatrix7/SteamCN.yaml, path: ./RRR/blackmatrix7/SteamCN.yaml}
+  Steam: {<<: *b1, url: https://taoqix.github.io/rules/blackmatrix7/Steam.yaml, path: ./RRR/blackmatrix7/Steam.yaml}
 
-  Global_Classical: {<<: *b1, url: https://taoqix.github.io/blackmatrix7/Global_Classical.yaml, path: ./RRR/blackmatrix7/Global_Classical.yaml}
-  China_Classical: {<<: *b1, url: https://taoqix.github.io/blackmatrix7/China_Classical.yaml, path: ./RRR/blackmatrix7/China_Classical.yaml}
-  lan: {<<: *b1, url: https://taoqix.github.io/blackmatrix7/Lan.yaml, path: ./RRR/blackmatrix7/Lan.yaml}
+  Global_Classical: {<<: *b1, url: https://taoqix.github.io/rules/blackmatrix7/Global_Classical.yaml, path: ./RRR/blackmatrix7/Global_Classical.yaml}
+  China_Classical: {<<: *b1, url: https://taoqix.github.io/rules/blackmatrix7/China_Classical.yaml, path: ./RRR/blackmatrix7/China_Classical.yaml}
+  lan: {<<: *b1, url: https://taoqix.github.io/rules/blackmatrix7/Lan.yaml, path: ./RRR/blackmatrix7/Lan.yaml}
 
 
 rules:
