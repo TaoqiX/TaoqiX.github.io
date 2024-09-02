@@ -1,7 +1,7 @@
 # 策略组引用
 
-W_A: &w1 {proxies: [新加坡02, 台湾01, 日本01]}
-W_B: &w2 {proxies: [DIRECT, 新加坡02, 台湾01, 日本01]}
+W_A: &w1 {proxies: [新加坡02, 台湾01, 日本01, 美国04]}
+W_B: &w2 {proxies: [DIRECT, 新加坡02, 台湾01, 日本01, 美国04]}
 
 
 # 🌏 代理默认
@@ -41,6 +41,7 @@ proxies:
     - { name: 新加坡02, type: ss, server: hb1.5354875.xyz, port: 25696, cipher: chacha20-ietf-poly1305, password: 581f7e56-5e44-47fb-bf1c-9d608aca9290, udp: true }
     - { name: 台湾01, type: vmess, server: tw1.5354875.xyz, port: 49574, uuid: 581f7e56-5e44-47fb-bf1c-9d608aca9290, alterId: 0, cipher: auto, udp: true, network: ws }
     - { name: 日本01, type: ss, server: hb1.5354875.xyz, port: 28666, cipher: chacha20-ietf-poly1305, password: 581f7e56-5e44-47fb-bf1c-9d608aca9290, udp: true }
+    - { name: '美国04', type: vmess, server: 104.18.15.147, port: 443, uuid: 7c722cca-2542-4792-bf8e-21c78461a086, alterId: 0, cipher: auto, udp: true, tls: true, skip-cert-verify: true, servername: cdn2.10392.online, network: grpc, grpc-opts: { grpc-service-name: '12306' } }
 
 
 proxy-groups:
