@@ -49,7 +49,7 @@ proxy-groups:
 
   # 分流代理组，不被其他代理组使用
   - {name: 🐟MATCH, <<: *r4, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png}
-  - {name: 💬chatGPT, <<: *r5, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Reddit.png}
+  - {name: 💬chatGPT, <<: *r5, icon: https://taoqix.github.io/ChatGPT.png}
   - {name: 🇬 谷歌服务, <<: *r5, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Google.png}
   - {name: 🎬TikTok, <<: *r5, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/TikTok.png}
   - {name: ✈️Telegram, <<: *r5, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png}
